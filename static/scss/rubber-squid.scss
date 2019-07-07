@@ -74,7 +74,12 @@ body {
 
 .copyright-icon {
     color: $grey2;
+
+    a {
+        color: $grey2;
+    }
 }
+
 
 
 .sticky-footer {
@@ -134,7 +139,6 @@ body {
 .rs-article:hover .rs-header-line {
     width: 8rem;
 }
-
 
 // -----------------------------------------------------------------------------
 // Divider
