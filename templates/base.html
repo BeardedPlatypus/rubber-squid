@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content = "width=device-width, initial-scale=1">
+
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    {% include 'components/internal_stylesheets.html' %}
+    {% include 'components/external_stylesheets.html' %}
+  </head> 
+  <body>
+    {% block navigation %}
+    {% include 'components/navigation.html' %}
+    {% endblock navigation %}
+
+    {% block body %}
+    {% include 'components/body.html' %}
+    {% endblock body %}
+
+    {% block footer %}
+    {% include 'components/footer.html' %}
+    {% endblock footer %}
+
+    {% block scripts %}
+    {% include 'components/scripts.html' %}
+    {% endblock scripts %}
+  </body>
+</html>

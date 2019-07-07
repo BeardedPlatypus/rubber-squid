@@ -1,0 +1,6 @@
+{# Scripts #}
+<script src="{% if page or tag or tags %}../{% endif %}theme/js/cube.min.js"></script>
+<script>
+  var cubeNode = document.getElementById("brand-svg");
+  var app = Elm.Main.init({node: cubeNode});
+</script>

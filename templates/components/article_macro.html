@@ -1,0 +1,25 @@
+{%- macro render_preview(article) %}
+<a href="{{ SITEURL }}/{{ article.url }}">
+  <article class="rs-article">
+    <div class="container">
+      <div class="rs-article_header" >
+        <div class="rs-meta-container">
+          <span class="rs-meta">
+            <time datetime="{{ article.locale_date }}">{{ article.locale_date }}</p>
+          </span>
+        </div>
+        <h1 class="title rs-title">
+          {{ article.title }}
+        </h1>
+        <div class="rs-header-line"></div>
+      </div>
+      <div class="rs-summary">
+        <p>
+          {{ article.summary }}
+        </p>
+      </div>
+      </div>
+    <div class="rs-divider"></div>
+  </article>
+</a>
+{%- endmacro %}

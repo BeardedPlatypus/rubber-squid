@@ -1,0 +1,20 @@
+{# Footer #}
+<footer class="footer sticky-footer">
+  <div class="container has-text-centered">
+    {% if SOCIAL %}
+    <p class="copyright-icon">
+      {% for url, icon in SOCIAL %}
+      <a href="{{ url }}">
+        <span class="icon is-large">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fab {{ icon }} fa-stack-2x fa-inverse" data-fa-transform="shrink-3"></i>
+          </span>
+        </span>
+      </a>
+      {% endfor %}
+    </p>
+    {% endif %}
+    <p class="copyright-notice">Copyright © {{ COPYRIGHT }}</p>
+  </div>
+</footer>
