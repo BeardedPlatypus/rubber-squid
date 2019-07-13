@@ -1,17 +1,10 @@
 {# Index #}
 {% extends "base.html" %}
 
-{% import 'components/art.html' as art %}
+{% import 'components/article_macro.html' as art %}
 
 {% block content %}
-{% block content_title %}
-
 {% for article in articles_page.object_list %}
 {{ art.render_preview(article) }}
 {% endfor %}
-
-{% endblock %}
-
-{# Article List #}
-
 {% endblock %}

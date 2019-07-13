@@ -30,14 +30,14 @@
              href="{{ SITEURL }}/index.html">
             Blog
           </a>
-          {% if len(pages) > 0 %}
+          {% if pages|length > 0 %}
           <a class="navbar-item"
              href="{{ SITEURL }}/{{ pages[0].url }}">
             {{ pages[0].title }}
           </a>
           {% endif %}
 
-          {% if len(pages) > 1 %}
+          {% if pages|length > 1 %}
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               More

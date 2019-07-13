@@ -11,11 +11,21 @@
   </head> 
   <body>
     {% block navigation %}
-    {% include 'components/navigation.html' %}
+    {% import 'components/navigation.html' as navigation %}
+    {{ navigation.render() }}
     {% endblock navigation %}
 
     {% block body %}
-    {% include 'components/body.html' %}
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+          {% block content %}
+          {% endblock %}
+          </div>
+        </div>
+      </div>
+    </section>
     {% endblock body %}
 
     {% block footer %}
