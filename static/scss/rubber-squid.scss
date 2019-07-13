@@ -2,8 +2,8 @@
 //  Variables
 // -----------------------------------------------------------------------------
 // Colours
-$grey1: #181A1E;
-$grey2: #282D33;
+$grey1: #353535;//#181A1E;
+$grey2: #555;//#282D33;
 $grey3: #404752;
 $grey4: #4A535E;
 $grey5: #BED4F2;
@@ -62,6 +62,15 @@ body {
     width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $grey1;
+  @include Lato(700);
+}
 
 // -----------------------------------------------------------------------------
 // Footer
@@ -76,7 +85,7 @@ body {
     color: $grey2;
 
     a {
-        color: $grey2;
+        color: $grey1;
     }
 }
 
@@ -87,6 +96,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 5em;
+    border-top: 0.075em solid $grey_header;
 }
 
 
@@ -99,6 +109,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.rs-post-title {
+    color: $grey1;
+    @include Lato(700);
+    font-size: 4em;
+    margin: 1rem 0;
+    text-align: center;
+}
+
 
 .rs-meta {
     color: $grey6;
@@ -106,9 +124,12 @@ body {
     font-size: 1.125em;
     letter-spacing: 0.5px;
     text-align: left;
-    
 }
 
+.rs-post-meta-container {
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
 
 .rs-meta-container {
     margin-bottom: 1.25rem;
@@ -123,8 +144,50 @@ body {
     padding-bottom: 1em;
 }
 
+.rs-article-content {
+    color: $grey2;
+    @include LibreBaskerville(400);
+    font-size: 1.25em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    p { 
+        margin: 0 0 1rem;
+        text-align: justify;
+        color: $grey2;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding: 0.5rem 0 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.17em;
+        padding: 0.5rem 0 1.5rem;
+    }
+
+    h3 {
+        font-size: 1em;
+        padding: 0.5rem 0 1.25rem;
+    }
+
+    ul, ol {
+        margin: 0 0 1rem;
+        padding-inline-start: 40px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+}
+
 .rs-article {
-    padding-bottom: 2em;
+    padding-bottom: 6.5em;
     padding-top: 1em;
 }
 
@@ -134,6 +197,13 @@ body {
     display: block;
     width: 4rem;
     margin-bottom: 1.0rem;
+}
+
+.rs-post-header-line {
+    border-top: 0.4rem solid $grey1;
+    display: block;
+    width: 5rem;
+    margin: 0 auto 3rem;
 }
 
 .rs-article:hover .rs-header-line {
