@@ -8,7 +8,7 @@
             <time datetime="{{ article.locale_date }}">{{ article.locale_date }}</time>
           </span>
         </div>
-        <h1 class="title rs-title">
+        <h1 class="rs-title">
           {{ article.title }}
         </h1>
         <div class="rs-header-line"></div>
@@ -22,4 +22,28 @@
     </div>
   </article>
 </a>
+{%- endmacro %}
+
+{%- macro render_article(article) %}
+  <article class="rs-article">
+    <div class="container">
+      <div class="rs-article_header" >
+        <div class="rs-post-meta-container">
+          <span class="rs-meta">
+            <time datetime="{{ article.locale_date }}">{{ article.locale_date }}</time>
+          </span>
+        </div>
+        <h1 class="rs-post-title">
+          {{ article.title }}
+        </h1>
+        <div class="rs-post-header-line"></div>
+      </div>
+      <div class="rs-article-content">
+        <p>
+          {{ article.content }}
+        </p>
+      </div>
+    </div>
+  </article>
+
 {%- endmacro %}
