@@ -6,8 +6,11 @@
           content = "width=device-width, initial-scale=1">
 
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
     {% include 'components/internal_stylesheets.html' %}
+
     {% include 'components/external_stylesheets.html' %}
+
   </head> 
   <body>
     {% block navigation %}
