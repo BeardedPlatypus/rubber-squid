@@ -1,0 +1,10 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo "Theme has been triggered."
+  displayName: 'Theme'
